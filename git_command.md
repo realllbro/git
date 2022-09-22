@@ -283,6 +283,33 @@ git add 파일1 파일2 ...
 => ex) git add file1.txt, file2.txt, file3.txt
  # 파일들을 스테이지에 추가합니다.
  # 새로 생성한 파일을 스테이지에 추가하고 싶다면 반드시 add 명령을 사용합니다.
+ 
+ 
+ git add -p
+ git add -p를 사용하면 파일들의 변경점을 hunk 단위로 보여주고, 해당 hunk에 대해 Stage, Skip 등의 action을 취할 수 있습니다. (hunk는 Stage될 수 있는 파일 조각 단위입니다.)
+ y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+
+자주 사용되는 명령어는 y, n, q, s, e입니다.
+
+y : 이 hunk를 stage 시킵니다.
+n : 이 hunk를 stage하지 않습니다.
+q : add 과정을 종료합니다.
+s : 이 hunk를 더 작은 단위의 hunk로 나눕니다. 한 hunk에 대해서 1번만 실행할 수 있습니다.
+e : 현재 hunk 내용을 직접 편집합니다.
+ 
 ```
 
 ## #git commit
