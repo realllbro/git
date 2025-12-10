@@ -1,3 +1,23 @@
+```sh
+
+클론받은 git 프로젝트 내 git에 푸쉬하기 인텔리제이, 터미널 두개로 알려줘
+
+1. IntelliJ IDEA 방식
+
+원격 저장소 변경
+VCS → Git → Remotes... (또는 Ctrl+Shift+A로 "Remotes" 검색)
+기존 origin을 삭제하거나 변경
+"+" 버튼 클릭하여 내 저장소 URL 추가
+Name: origin, URL: https://github.com/내계정/내저장소.git
+
+
+푸시하기
+VCS → Git → Push... (또는 Ctrl+Shift+K)
+브랜치 선택 후 "Push" 클릭
+처음이면 강제 푸시 필요할 수 있음 (Push 창에서 "Force Push" 체크)
+
+2. 터미널 방식
+
 # 1. 현재 원격 저장소 확인
 git remote -v
 
@@ -13,6 +33,12 @@ git push -u origin main --force
 # 또는 master 브랜치인 경우
 # git push -u origin master --force
 
+참고사항:
+
+--force는 원격 저장소에 기존 내용이 있을 때 덮어쓰기 위해 사용
+새 저장소라면 --force 없이 git push -u origin main만 해도 됨
+-u 옵션은 upstream을 설정하여 이후엔 git push만 입력해도 되게 함
+```
 
 ## #git 다운로드
 <https://git-scm.com/download/win>
