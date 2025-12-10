@@ -1,3 +1,18 @@
+# 1. 현재 원격 저장소 확인
+git remote -v
+
+# 2. 기존 origin 제거
+git remote remove origin
+
+# 3. 내 저장소를 origin으로 추가
+git remote add origin https://github.com/내계정/내저장소.git
+# 또는 SSH: git remote add origin git@github.com:내계정/내저장소.git
+
+# 4. 푸시 (강제 푸시가 필요한 경우)
+git push -u origin main --force
+# 또는 master 브랜치인 경우
+# git push -u origin master --force
+
 
 ## #git 다운로드
 <https://git-scm.com/download/win>
